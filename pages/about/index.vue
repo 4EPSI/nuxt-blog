@@ -4,9 +4,9 @@
       <div class="container">
         <h1 class="title">About my blog:</h1>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt obcaecati ut sapiente. Eum dicta nihil beatae architecto quod explicabo nulla blanditiis vero sunt, cum, ad minus rem repellendus inventore iste?</p>
-        <no-ssr>
+        <ClientOnly>
           <intro title="Lorem ipsum dolor sit, amet" />
-        </no-ssr>
+        </ClientOnly>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt obcaecati ut sapiente. Eum dicta nihil beatae architecto quod explicabo nulla blanditiis vero sunt, cum, ad minus rem repellendus inventore iste?</p>
         <img src="@/assets/img/about.jpg" alt="img">
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt obcaecati ut sapiente. Eum dicta nihil beatae architecto quod explicabo nulla blanditiis vero sunt, cum, ad minus rem repellendus inventore iste?</p>
