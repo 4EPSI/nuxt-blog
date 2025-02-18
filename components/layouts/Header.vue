@@ -18,7 +18,8 @@
 <script setup>
 const links = [
   { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' }
+  { name: 'About', path: '/about' },
+  { name: 'Blog', path: '/blog'}
 ]
 </script>
 
