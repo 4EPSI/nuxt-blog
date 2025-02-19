@@ -8,7 +8,7 @@
         <textarea v-model="comment.text"></textarea>
 
         <div class="controls">
-          <button class="btn btnPrimary">Submit!</button>
+          <AppButton>Submit!</AppButton>
         </div>
       </form>
     </div>
@@ -16,6 +16,8 @@
 </template>
 
 <script setup>
+import AppButton from '@/components/UI/Controls/Button.vue'
+
 const comment = reactive({
   name: '',
   text: ''
