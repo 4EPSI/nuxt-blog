@@ -1,6 +1,11 @@
 <template>
   <section class="new-comment">
     <div class="container">
+
+      <Message 
+        v-if="message"
+        :message="message"
+      />
       <form @submit.prevent="onSubmit" class="comment-form">
         <AppInput v-model="comment.name">Name:</AppInput>
         <client-only>
@@ -16,6 +21,7 @@
 </template>
 
 <script setup>
+import Message from '@/components/UI/Message.vue'
 import AppButton from '@/components/UI/Controls/Button.vue'
 import AppInput from '@/components/UI/Controls/Input.vue'
 import AppTextArea from '@/components/UI/Controls/TextArea.vue'
@@ -25,8 +31,16 @@ const comment = reactive({
   text: ''
 })
 
+const message = ref(null)
+
 const onSubmit = () => {
   console.log(comment)
+  message.value = 'Submitted!'
+  Object.assign(comment, {
+    name: '',
+    email: '',
+    text: ''
+  })
 }
 </script>
 
