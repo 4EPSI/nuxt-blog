@@ -3,12 +3,12 @@
     <div class="container">
       <h2 class="title">Contact me!</h2>
       <form @submit.prevent="onSubmit" class="contact-form">
-        <label>Name:</label>
-        <input v-model="user.name" type="text">
-        <label>Email:</label>
-        <input v-model="user.email" type="text">
-        <label>Text:</label>
-        <textarea v-model="user.text"></textarea>
+        <AppInput v-model="user.name">Name:</AppInput>
+        <AppInput v-model="user.email" type="email">Email:</AppInput>
+
+        <client-only>
+          <AppTextArea v-model="user.text">Text:</AppTextArea>
+        </client-only>
 
         <div class="controls">
           <AppButton class="btnWhite">Submit!</AppButton>
@@ -19,6 +19,8 @@
 </template>
 
 <script setup>
+import AppInput from '@/components/UI/Controls/Input.vue'
+import AppTextArea from '@/components/UI/Controls/TextArea.vue'
 import AppButton from '@/components/UI/Controls/Button.vue'
 
 const user = reactive({

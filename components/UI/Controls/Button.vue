@@ -1,15 +1,14 @@
 <template>
   <button 
     class="btn"
-    :class="btnClass"
-    v-on="$listeners"
+    :class="props.type"
     v-bind="$attrs">
     <slot />
   </button>
 </template>
 
 <script setup>
-const btnClass = defineProps({
+const props = defineProps({
   type: {
     type: String,
     default: 'btnPrimary'

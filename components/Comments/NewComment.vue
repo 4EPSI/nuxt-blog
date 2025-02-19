@@ -2,10 +2,10 @@
   <section class="new-comment">
     <div class="container">
       <form @submit.prevent="onSubmit" class="comment-form">
-        <label>Name:</label>
-        <input v-model="comment.name" type="text">
-        <label>Text:</label>
-        <textarea v-model="comment.text"></textarea>
+        <AppInput v-model="comment.name">Name:</AppInput>
+        <client-only>
+          <AppTextArea v-model="comment.text">Text:</AppTextArea>
+        </client-only>
 
         <div class="controls">
           <AppButton>Submit!</AppButton>
@@ -17,6 +17,8 @@
 
 <script setup>
 import AppButton from '@/components/UI/Controls/Button.vue'
+import AppInput from '@/components/UI/Controls/Input.vue'
+import AppTextArea from '@/components/UI/Controls/TextArea.vue'
 
 const comment = reactive({
   name: '',
