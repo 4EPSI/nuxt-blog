@@ -4,6 +4,7 @@
       <div class="posts_wrapper">
         <postPreview 
           v-for="post in posts" :key="post.id" 
+          :admin="admin"
           :post="post"
         />
       </div>
@@ -18,6 +19,10 @@ const props = defineProps({
   posts: {
     type: Array,
     required: true
+  },
+  admin: {
+    type: Boolean,
+    default: false
   }
 })
 </script>

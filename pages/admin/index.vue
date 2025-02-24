@@ -1,5 +1,8 @@
 <template>
-  <PostsList :posts="posts" />
+  <PostsList 
+    :admin="true"
+    :posts="posts" 
+  />
 </template>
 
 <script setup>

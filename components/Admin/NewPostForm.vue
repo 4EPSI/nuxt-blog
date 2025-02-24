@@ -22,7 +22,15 @@
 const router = useRouter()
 const emit = defineEmits(['submit'])
 
-const post = ref({
+const props = defineProps({
+  postEdit: {
+    type: Object,
+    required: false,
+    default: () => null
+  }
+})
+
+const post = ref(props.postEdit ? props.postEdit : {
   title: '',
   descr: '',
   img: '',
