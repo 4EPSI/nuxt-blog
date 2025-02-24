@@ -1,14 +1,11 @@
 <template>
   <div class="wrapper-content wrapper-content--fixed">
-    <intro title="My posts: " />
-    <postsList :posts="posts" />
+    <Intro title="My posts: " />
+    <PostsList :posts="posts" />
   </div>
 </template>
 
 <script setup>
-import intro from '@/components/UI/Intro.vue'
-import postsList from '@/components/Blog/PostsList.vue'
-
 const posts = ref([
   {
     id: 1,

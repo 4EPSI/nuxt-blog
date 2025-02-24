@@ -1,17 +1,15 @@
 <template>
   <div class="wrapper-content wrapper-content--fixed">
     <promo />
-    <intro title="My Lasts posts: " />
+    <Intro title="My Lasts posts: " />
     <!-- posts -->
-    <postsList :posts="posts" />
+    <PostsList :posts="posts" />
     <contacts />
   </div>
 </template>
 
 <script setup>
 import promo from '@/components/Promo.vue'
-import intro from '@/components/UI/Intro.vue'
-import postsList from '@/components/Blog/PostsList.vue'
 import contacts from '@/components/Contacts.vue'
 
 const posts = ref([

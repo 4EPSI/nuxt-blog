@@ -3,7 +3,9 @@
     <div class="navbar">
       <div class="container">
         <div class="navbar-content">
-          <nuxt-link class="logo" to="/">Nuxt</nuxt-link>
+          <div class="logo">
+            <nuxt-link class="logo" to="/">Nuxt</nuxt-link>
+          </div>
           <ul class="navbar-list">
             <li v-for="link in links" :key="link.name" class="navbar-item">
               <nuxt-link class="navbar-link" :to="link.path">{{ link.name }}</nuxt-link>
@@ -24,6 +26,9 @@ const links = [
 </script>
 
 <style lang="scss">
+.logo {
+  color: #999;
+}
 .navbar-link {
   &.router-link-exact-active {
     color: #5247e7;
