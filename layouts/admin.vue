@@ -15,4 +15,8 @@
 <script setup>
 import Header from '@/components/layouts/Header.vue';
 
+// definePageMeta({
+//   middleware: ['auth']
+// })
+
 </script>

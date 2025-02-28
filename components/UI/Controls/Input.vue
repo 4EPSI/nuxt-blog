@@ -7,6 +7,7 @@
       v-bind="$attrs"
       :value="modelValue"
       :type="type"
+      :required="required"
       @input="$emit('update:modelValue', $event.target.value)"
     >
   </div>
@@ -21,6 +22,10 @@ const props = defineProps({
   type: {
     type: String,
     default: 'text'
+  },
+  required: {
+    type: Boolean,
+    default: true
   }
 })
 
